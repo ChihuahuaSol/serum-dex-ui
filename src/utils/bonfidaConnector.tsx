@@ -22,5 +22,3 @@ export default class BonfidaApi {
     return BonfidaApi.get(`trade/address?market=${marketAddress}`);
   }
 }
-
-export const BONFIDA_DATA_FEED = 'https://api.raydium.io/tv';
