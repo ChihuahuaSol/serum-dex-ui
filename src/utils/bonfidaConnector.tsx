@@ -1,7 +1,7 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  static URL: string = 'https://serum-api.bonfida.com/';
+  static URL: string = 'https://api.raydium.io/';
 
   static async get(path: string) {
     try {
@@ -19,8 +19,8 @@ export default class BonfidaApi {
   static async getRecentTrades(
     marketAddress: string,
   ): Promise<BonfidaTrade[] | null> {
-    return BonfidaApi.get(`trades/address/${marketAddress}`);
+    return BonfidaApi.get(`trades/address?market=${marketAddress}`);
   }
 }
 
-export const BONFIDA_DATA_FEED = 'https://serum-api.bonfida.com/tv';
+export const BONFIDA_DATA_FEED = 'https://api.raydium.io/tv';
