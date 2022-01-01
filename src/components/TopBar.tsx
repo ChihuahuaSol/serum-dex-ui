@@ -159,11 +159,6 @@ export default function TopBar() {
           <Menu.Item key={tradePageUrl} style={{ margin: '0 10px 0 20px' }}>
             TRADE
           </Menu.Item>
-          {connected && (!searchFocussed || location.pathname === '/balances') && (
-            <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
-              BALANCES
-            </Menu.Item>
-          )}
           {connected && (!searchFocussed || location.pathname === '/orders') && (
             <Menu.Item key="/orders" style={{ margin: '0 10px' }}>
               ORDERS
