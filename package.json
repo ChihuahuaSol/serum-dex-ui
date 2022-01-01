@@ -51,7 +51,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "prettier": "prettier --write src"
+    "prettier": "prettier --write src",
+    "copy-files": "cp -r ./src/{markets.json,token-mints.json} ./node_modules/@project-serum/serum/lib/"
   },
   "eslintConfig": {
     "extends": "react-app"
