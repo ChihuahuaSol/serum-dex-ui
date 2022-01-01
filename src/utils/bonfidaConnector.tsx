@@ -19,7 +19,7 @@ export default class BonfidaApi {
   static async getRecentTrades(
     marketAddress: string,
   ): Promise<BonfidaTrade[] | null> {
-    return BonfidaApi.get(`trades/address/${marketAddress}`);
+    return BonfidaApi.get(`/trades/address/${marketAddress}`);
   }
 }
 
