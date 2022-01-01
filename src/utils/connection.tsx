@@ -8,7 +8,7 @@ import { ConnectionContextValues, EndpointInfo } from './types';
 export const ENDPOINTS: EndpointInfo[] = [
   {
     name: 'mainnet-beta',
-    endpoint: 'https://connect.runnode.com/?apikey=gK7b0CFoUaObTL6f2qU2',
+    endpoint: 'https://ssc-dao.genesysgo.net/',
     custom: false,
   },
   { name: 'localnet', endpoint: 'http://127.0.0.1:8899', custom: false },
