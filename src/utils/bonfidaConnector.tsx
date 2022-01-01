@@ -1,7 +1,7 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  static URL: string = 'https://serum-api.bonfida.com/';
+  static URL: string = 'https://www.lanadex.com/api';
 
   static async get(path: string) {
     try {
@@ -11,7 +11,7 @@ export default class BonfidaApi {
         return responseJson.success ? responseJson.data : null;
       }
     } catch (err) {
-      console.log(`Error fetching from Bonfida API ${path}: ${err}`);
+      console.log(`Error fetching API ${path}: ${err}`);
     }
     return null;
   }
@@ -19,8 +19,8 @@ export default class BonfidaApi {
   static async getRecentTrades(
     marketAddress: string,
   ): Promise<BonfidaTrade[] | null> {
-    return BonfidaApi.get(`trades/address/${marketAddress}`);
+    return BonfidaApi.get(`market/${marketAddress}`);
   }
 }
 
-export const BONFIDA_DATA_FEED = 'https://serum-api.bonfida.com/tv';
+export const BONFIDA_DATA_FEED = 'https://www.lanadex.com/api/tv';
