@@ -1,7 +1,7 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  static URL: string = 'https://www.lanadex.com/api';
+  static URL: string = 'https://lanadex.com/api';
 
   static async get(path: string) {
     try {
@@ -19,8 +19,8 @@ export default class BonfidaApi {
   static async getRecentTrades(
     marketAddress: string,
   ): Promise<BonfidaTrade[] | null> {
-    return BonfidaApi.get(`market/${marketAddress}`);
+    return BonfidaApi.get(`trades/address/${marketAddress}`);
   }
 }
 
-export const BONFIDA_DATA_FEED = 'https://www.lanadex.com/api/tv';
+export const BONFIDA_DATA_FEED = 'https://lanadex.com/api/tv';
